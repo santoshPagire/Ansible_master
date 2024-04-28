@@ -1,0 +1,11 @@
+---
+- name: use of become
+  hosts: all
+  become: true
+  tasks:
+    - name: inastalling mysql
+      apt:
+        name: mysql-server
+        state: present
+        update_cache: yes
+      

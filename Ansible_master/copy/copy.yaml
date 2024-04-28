@@ -1,0 +1,8 @@
+---
+- name: copy module
+  hosts: all
+  tasks:
+    - name: copy file 
+      copy:
+        src: /home/einfochips/Desktop/temp.txt
+        dest: /home/santosh/Desktop

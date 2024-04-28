@@ -1,0 +1,11 @@
+---
+- name: use of debug module
+  hosts: localhost
+  tasks: 
+    - name: retriving data from file
+      command: cat /etc/passwd 
+      register: data
+    
+    - name: printing output on console
+      debug:
+        msg: "{{ data.stdout }}"

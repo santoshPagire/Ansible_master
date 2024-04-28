@@ -1,0 +1,11 @@
+---
+- name: implementing template
+  hosts: all
+  vars:
+     my_name: santosh
+     age: 24
+  tasks:
+    - name: adding data using template
+      template:
+        src: name.j2
+        dest: /home/santosh/Desktop/name.txt

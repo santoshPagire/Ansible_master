@@ -1,0 +1,6 @@
+---
+- name: inatsll httpd
+  hosts: all
+  
+  roles:
+    - Service_setup

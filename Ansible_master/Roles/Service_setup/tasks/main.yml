@@ -1,0 +1,26 @@
+---
+# tasks file for Service_setup
+
+- name: install package
+ 
+  apt:
+    name: "{{ package_name }}"
+    state: present
+
+- name: copy file
+  copy: 
+    src: file.txt
+    dest: /home/santosh/Desktop
+ 
+- name: start service
+  service:
+    name: "{{ package_name }}"
+    state: started
+    enabled: yes
+
+- name: templating
+  template:
+    src: ansible.j2
+    dest: /home/santosh/Desktop/rolename.txt
+  
+

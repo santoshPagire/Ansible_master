@@ -1,0 +1,9 @@
+---
+- name: printing hostname using template
+  hosts: all
+  tasks:
+    - name: adding data in file
+      template:
+        src: hostname.j2
+        dest: /home/santosh/Desktop/hostname.txt
+    

@@ -1,0 +1,6 @@
+---
+- name: use shell module
+  hosts: all
+  tasks:
+    - name: run script
+      shell: ./test.sh

@@ -1,0 +1,18 @@
+---
+- name: use of handlers
+  hosts: all
+  become: true
+  tasks:
+    - name: install nginx 
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+      notify: restart nginx
+   
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted     
+   

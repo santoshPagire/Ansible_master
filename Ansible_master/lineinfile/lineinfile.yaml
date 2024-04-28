@@ -1,0 +1,8 @@
+---
+- name: using lineinfile module
+  hosts: all
+  tasks: 
+    - name: adding data using lineinfile
+      lineinfile:
+        path: /home/santosh/Desktop/lineinfile.txt
+        line: this text is added using lineinfile

@@ -1,0 +1,13 @@
+---
+- name: using with_items
+  hosts: all
+  tasks:
+    - name: installing servers 
+      apt: 
+       name: {{ item }}
+       state: present
+       update_cache: yes
+    
+      with_items:
+        - nginx
+        - mysql-server

@@ -1,0 +1,6 @@
+---
+# vars file for Service_setup
+
+package_name: nginx
+
+tech: ansible

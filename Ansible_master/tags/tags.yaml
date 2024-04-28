@@ -1,0 +1,15 @@
+---
+- name: use of file module
+  hosts: all
+  tasks: 
+    - name: create file
+      file:
+       path: /home/santosh/Desktop/file.txt
+       state: touch
+      tags: [ 'task1' ]
+
+    - name: create directory
+      file:
+        path: /home/santosh/Desktop/dir1
+        state: directory 
+      tags: ['task2' ]
